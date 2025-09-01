@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Logo } from "./ui/logo";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +23,12 @@ const Navigation = () => {
     <nav className="fixed top-0 w-full z-50 glass-card border-b">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="text-xl font-bold hero-gradient bg-clip-text text-transparent">
-            Portfolio
+          {/* <Link to="/" className="flex items-center space-x-2">
+            <Logo />
+          </Link> */}
+
+          <Link to="/" className="bg-gradient-to-r from-hero-from to-hero-to bg-clip-text text-transparent">
+            Saurav Kumar
           </Link>
 
           {/* Desktop Navigation */}

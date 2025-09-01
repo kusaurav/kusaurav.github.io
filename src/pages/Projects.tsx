@@ -46,7 +46,7 @@ const Projects = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              My <span className="hero-gradient bg-clip-text text-transparent">Projects</span>
+              My <span className="bg-gradient-to-r from-hero-from to-hero-to bg-clip-text text-transparent">Projects</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               A showcase of my recent work and side projects

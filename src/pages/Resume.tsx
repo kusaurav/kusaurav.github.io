@@ -51,12 +51,16 @@ const Resume = () => {
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              My <span className="hero-gradient bg-clip-text text-transparent">Resume</span>
+              My <span className="bg-gradient-to-r from-hero-from to-hero-to bg-clip-text text-transparent">Resume</span>
             </h1>
-            <Button className="hero-gradient hover:opacity-90 transition-opacity">
-              <Download className="mr-2 h-4 w-4" />
-              Download PDF
-            </Button>
+            {/* https://drive.google.com/file/d/1WnBvy_jx3-yZcBtROFXJpdJA-0ADvDXo3F6e5ZEYzUk/view */}
+            {/* https://drive.google.com/uc?export=download&id=1WnBvy_jx3-yZcBtROFXJpdJA-0ADvDXo3F6e5ZEYzUk --download*/}
+            <a href="https://drive.google.com/file/d/1WnBvy_jx3-yZcBtROFXJpdJA-0ADvDXo3F6e5ZEYzUk/view" target="_blank" rel="noopener noreferrer">
+              <Button className="hero-gradient hover:opacity-90 transition-opacity">
+                <Download className="mr-2 h-4 w-4" />
+                  View Resume
+              </Button>
+            </a>
           </div>
 
           {/* Contact Info */}
@@ -65,15 +69,15 @@ const Resume = () => {
               <div className="grid md:grid-cols-3 gap-4 text-center">
                 <div className="flex items-center justify-center gap-2">
                   <Mail className="h-4 w-4 text-hero-from" />
-                  <span>john@example.com</span>
+                  <span>sauravkumar52270@gmail.com</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <Phone className="h-4 w-4 text-hero-from" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91-8445876407</span>
                 </div>
                 <div className="flex items-center justify-center gap-2">
                   <MapPin className="h-4 w-4 text-hero-from" />
-                  <span>San Francisco, CA</span>
+                  <span>Abu Dhabi, UAE</span>
                 </div>
               </div>
             </CardContent>

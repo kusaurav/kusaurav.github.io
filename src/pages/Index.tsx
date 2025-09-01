@@ -50,11 +50,10 @@ const Index = () => {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-              Hi, I'm <span className="text-white">John Doe</span>
+              Hi, I'm <span className="text-white">Saurav Kumar</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
-              Full-Stack Developer passionate about creating digital experiences 
-              that make a difference
+            I am a passionate <span className="font-semibold">Backend Developer</span> with over <span className="font-semibold">2+ years of experience</span> in building and scaling <span className="font-semibold">robust backend services using Java</span>. I specialize in designing APIs, optimizing databases, and creating scalable solutions that power modern applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -85,7 +84,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-center mb-16">
-              What I <span className="hero-gradient bg-clip-text text-transparent">Bring</span>
+              What I <span className="bg-gradient-to-r from-hero-from to-hero-to bg-clip-text text-transparent">Bring</span>
             </h2>
             
             <div className="grid md:grid-cols-3 gap-8">
@@ -118,7 +117,7 @@ const Index = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                Recent <span className="hero-gradient bg-clip-text text-transparent">Work</span>
+                Recent <span className="bg-gradient-to-r from-hero-from to-hero-to bg-clip-text text-transparent">Work</span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 A glimpse of my latest projects
