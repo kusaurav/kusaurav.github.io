@@ -14,7 +14,7 @@ const About = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              About <span className="hero-gradient bg-clip-text text-transparent">Me</span>
+              About <span className="bg-gradient-to-r from-hero-from to-hero-to bg-clip-text text-transparent">Me</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Passionate developer crafting digital experiences with modern technologies

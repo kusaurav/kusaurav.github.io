@@ -35,19 +35,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "john@example.com",
-      href: "mailto:john@example.com"
+      value: "sauravkumar52270@gmail.com",
+      href: "mailto:sauravkumar52270@gmail.com"
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+91 8445876407",
+      href: "tel:+91 8445876407"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Abu Dhabi, UAE",
       href: "#"
     }
   ];
@@ -58,9 +58,12 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Get In <span className="hero-gradient bg-clip-text text-transparent">Touch</span>
-            </h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+  Get In{' '}
+  <span className="bg-gradient-to-r from-hero-from to-hero-to bg-clip-text text-transparent">
+    Touch
+  </span>
+</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Let's discuss your next project or just say hello
             </p>
