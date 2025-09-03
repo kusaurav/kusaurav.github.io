@@ -7,49 +7,51 @@ import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: ""
-  });
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const { toast } = useToast();
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to a server
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        toast({
+          title: "Error",
+          description: "Oops! Something went wrong. Try again later.",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Network error. Try again later.",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "sauravkumar52270@gmail.com",
-      href: "mailto:sauravkumar52270@gmail.com"
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+91 8445876407",
-      href: "tel:+91 8445876407"
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "Abu Dhabi, UAE",
-      href: "#"
-    }
+    { icon: Mail, label: "Email", value: "sauravkumar52270@gmail.com", href: "mailto:sauravkumar52270@gmail.com" },
+    { icon: Phone, label: "Phone", value: "+91 8445876407", href: "tel:+918445876407"},
+    { icon: MapPin, label: "Location", value: "Abu Dhabi, UAE", href: "#" }
   ];
 
   return (
@@ -58,12 +60,12 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-  Get In{' '}
-  <span className="bg-gradient-to-r from-hero-from to-hero-to bg-clip-text text-transparent">
-    Touch
-  </span>
-</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Get In{' '}
+              <span className="bg-gradient-to-r from-hero-from to-hero-to bg-clip-text text-transparent">
+                Touch
+              </span>
+            </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Let's discuss your next project or just say hello
             </p>
@@ -80,41 +82,39 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <Input
-                      name="name"
-                      placeholder="Your Name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="bg-background/50 border-glass-border"
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      name="email"
-                      type="email"
-                      placeholder="Your Email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="bg-background/50 border-glass-border"
-                    />
-                  </div>
-                  <div>
-                    <Textarea
-                      name="message"
-                      placeholder="Your Message"
-                      rows={6}
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      className="bg-background/50 border-glass-border resize-none"
-                    />
-                  </div>
-                  <Button type="submit" className="w-full hero-gradient hover:opacity-90 transition-opacity">
+                  <Input
+                    name="name"
+                    placeholder="Your Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="bg-background/50 border-glass-border"
+                  />
+                  <Input
+                    name="email"
+                    type="email"
+                    placeholder="Your Email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="bg-background/50 border-glass-border"
+                  />
+                  <Textarea
+                    name="message"
+                    placeholder="Your Message"
+                    rows={6}
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    className="bg-background/50 border-glass-border resize-none"
+                  />
+                  <Button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full hero-gradient hover:opacity-90 transition-opacity flex items-center justify-center"
+                  >
                     <Send className="mr-2 h-4 w-4" />
-                    Send Message
+                    {loading ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
