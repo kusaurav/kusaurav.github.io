@@ -17,7 +17,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         pass: process.env.GMAIL_APP_PASSWORD
       },
     });
-    console.log("PASS (raw):", JSON.stringify(process.env.GMAIL_APP_PASSWORD));
 
     await transporter.sendMail({
       from: process.env.GMAIL_USER,
