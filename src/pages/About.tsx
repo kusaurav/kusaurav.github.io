@@ -3,8 +3,8 @@ import { Badge } from "@/components/ui/badge";
 
 const About = () => {
   const skills = [
-    "React", "TypeScript", "JavaScript", "Node.js", "Python", 
-    "Next.js", "Tailwind CSS", "Git", "Docker", "AWS"
+    "Java", "Spring Boot", "MySQL", "Kafka", "MongoDB", "Redis", 
+    "ElasticSearch", "AWS" , "Git", "Docker", 
   ];
 
   return (
@@ -31,13 +31,14 @@ const About = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  I'm a passionate full-stack developer with 3+ years of experience building 
-                  web applications. I love turning complex problems into simple, beautiful 
-                  designs.
+                I'm a passionate Java developer with over 2 years of experience building 
+                scalable and high-performance backend systems. I enjoy designing clean 
+                architectures and writing efficient, maintainable code that powers real-world 
+                applications.
                 </p>
                 <p className="text-muted-foreground">
-                  When I'm not coding, you can find me exploring new technologies, 
-                  contributing to open-source projects, or enjoying outdoor activities.
+                When I'm not coding, I love exploring new technologies, optimizing system 
+                performance, and occasionally contributing to open-source projects.
                 </p>
               </CardContent>
             </Card>
@@ -48,15 +49,18 @@ const About = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h4 className="font-semibold mb-2">Frontend Development</h4>
+                  <h4 className="font-semibold mb-2">Backend Development</h4>
                   <p className="text-sm text-muted-foreground">
-                    Creating responsive, interactive user interfaces with React, TypeScript, and modern CSS.
+                  Designing and developing robust APIs and microservices using Java, Spring Boot, 
+                  and Kafka. Experienced in integrating Redis for caching, Elasticsearch for fast 
+                  search capabilities, and MySQL for reliable data storage.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Backend Development</h4>
+                  <h4 className="font-semibold mb-2">System Design & Optimization</h4>
                   <p className="text-sm text-muted-foreground">
-                    Building scalable APIs and server-side applications with Node.js and Python.
+                  Building scalable, distributed systems and improving performance through 
+                  efficient database design, asynchronous processing, and message-driven architectures.
                   </p>
                 </div>
               </CardContent>
