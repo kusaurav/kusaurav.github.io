@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Code2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Logo } from "./ui/logo";
 
@@ -20,15 +20,20 @@ const Navigation = () => {
   const isActivePath = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass-card border-b">
+    <nav className="fixed top-0 w-full z-50 glass-card border-b bg-background/50 backdrop-blur-xl">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* <Link to="/" className="flex items-center space-x-2">
             <Logo />
           </Link> */}
 
-          <Link to="/" className="bg-gradient-to-r from-hero-from to-hero-to bg-clip-text text-transparent">
-            Saurav Kumar
+          <Link to="/" className="flex items-center gap-2 font-bold text-xl">
+            <div className="p-1.5 rounded-lg bg-gradient-to-br from-hero-from to-hero-to text-white">
+              <Code2 className="h-5 w-5" />
+            </div>
+            <span className="bg-gradient-to-r from-hero-from to-hero-to bg-clip-text text-transparent">
+              Saurav Kumar
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -39,8 +44,8 @@ const Navigation = () => {
                 to={item.path}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-hero-from",
-                  isActivePath(item.path) 
-                    ? "text-hero-from" 
+                  isActivePath(item.path)
+                    ? "text-hero-from"
                     : "text-muted-foreground"
                 )}
               >
@@ -71,8 +76,8 @@ const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                   className={cn(
                     "block px-4 py-2 text-sm font-medium transition-colors hover:text-hero-from",
-                    isActivePath(item.path) 
-                      ? "text-hero-from bg-accent/50" 
+                    isActivePath(item.path)
+                      ? "text-hero-from bg-accent/50"
                       : "text-muted-foreground"
                   )}
                 >

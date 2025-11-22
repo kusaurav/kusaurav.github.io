@@ -50,7 +50,7 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: Mail, label: "Email", value: "sauravkumar52270@gmail.com", href: "mailto:sauravkumar52270@gmail.com" },
-    { icon: Phone, label: "Phone", value: "+91 8445876407", href: "tel:+918445876407"},
+    { icon: Phone, label: "Phone", value: "+91 8445876407", href: "tel:+918445876407" },
     { icon: MapPin, label: "Location", value: "Abu Dhabi, UAE", href: "#" }
   ];
 
@@ -139,7 +139,9 @@ const Contact = () => {
                         </div>
                         <div>
                           <p className="font-medium">{item.label}</p>
-                          <p className="text-muted-foreground">{item.value}</p>
+                          <a href={item.href} className="text-muted-foreground hover:text-hero-from transition-colors">
+                            {item.value}
+                          </a>
                         </div>
                       </div>
                     );

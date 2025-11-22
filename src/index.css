@@ -43,7 +43,7 @@ All colors MUST be HSL.
     --glass-border: 213 31% 91% / 0.1;
 
     --radius: 0.5rem;
-    
+
     /* Animations and effects */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --shadow-glow: 0 0 40px hsl(var(--hero-gradient-from) / 0.3);
@@ -81,22 +81,70 @@ All colors MUST be HSL.
   .hero-gradient {
     background: linear-gradient(135deg, hsl(var(--hero-gradient-from)), hsl(var(--hero-gradient-to)));
   }
-  
+
   .glass-card {
     background: hsl(var(--glass-bg));
     backdrop-filter: blur(20px);
     border: 1px solid hsl(var(--glass-border));
   }
-  
+
   .glow-shadow {
     box-shadow: var(--shadow-glow);
   }
-  
+
   .card-shadow {
     box-shadow: var(--shadow-card);
   }
-  
+
   .transition-smooth {
     transition: var(--transition-smooth);
+  }
+
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+
+    100% {
+      transform: translateY(0px);
+    }
   }
 }

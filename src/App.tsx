@@ -10,6 +10,7 @@ import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 import Navigation from "./components/Navigation";
 import NotFound from "./pages/NotFound";
+import Footer from "./components/Footer";
 
 const queryClient = new QueryClient();
 
@@ -19,16 +20,19 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-background flex flex-col">
           <Navigation />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <div className="flex-grow">
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/resume" element={<Resume />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </div>
+          <Footer />
         </div>
       </BrowserRouter>
     </TooltipProvider>
