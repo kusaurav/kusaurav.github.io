@@ -2,64 +2,19 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Database, Server, Globe, Cpu, Cloud, Layers, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
+import { techStack } from "@/data/landing";
+import { recentProjects } from "@/data/projects";
+import SEO from "@/components/SEO";
 
 const Index = () => {
-  const techStack = [
-    {
-      icon: Server,
-      title: "Backend Development",
-      description: "Building robust APIs with Java & Spring Boot",
-      skills: ["Java", "Spring Boot", "Microservices", "REST APIs"]
-    },
-    {
-      icon: Database,
-      title: "Database Design",
-      description: "Optimizing data storage and retrieval",
-      skills: ["PostgreSQL", "MongoDB", "Redis", "SQL"]
-    },
-    {
-      icon: Cloud,
-      title: "Cloud & DevOps",
-      description: "Deploying scalable applications",
-      skills: ["AWS", "Docker", "Kubernetes", "CI/CD"]
-    },
-    {
-      icon: Globe,
-      title: "Frontend Development",
-      description: "Creating responsive user interfaces",
-      skills: ["React", "TypeScript", "Tailwind CSS", "Next.js"]
-    },
-    {
-      icon: Cpu,
-      title: "System Architecture",
-      description: "Designing scalable and maintainable systems",
-      skills: ["System Design", "Design Patterns", "Clean Architecture"]
-    },
-    {
-      icon: Layers,
-      title: "Tools & Methodologies",
-      description: "Streamlining development workflow",
-      skills: ["Git", "Agile", "Jira", "Testing"]
-    }
-  ];
-
-  const recentProjects = [
-    {
-      title: "E-Commerce Platform",
-      description: "Full-stack solution with React and Node.js",
-      tags: ["React", "Node.js", "MongoDB"]
-    },
-    {
-      title: "Task Management App",
-      description: "Collaborative tool with real-time updates",
-      tags: ["TypeScript", "React", "Firebase"]
-    }
-  ];
-
   return (
     <main className="pt-16">
+      <SEO
+        title="Home"
+        description="Saurav Kumar - Backend Developer specializing in building robust, scalable applications with modern technologies."
+      />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Animated Background Elements */}
@@ -84,7 +39,7 @@ const Index = () => {
               Hi, I'm <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Saurav Kumar</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
-              I am a passionate <span className="font-semibold text-white">Backend Developer</span> with over <span className="font-semibold text-white">2+ years of experience</span> in building and scaling <span className="font-semibold text-white">robust backend services using Java</span>.
+              I am a passionate <span className="font-semibold text-white">Backend Developer</span> with over <span className="font-semibold text-white">2.5+ years of experience</span> in building and scaling <span className="font-semibold text-white">robust backend services using Java</span>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Button

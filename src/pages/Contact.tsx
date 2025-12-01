@@ -5,9 +5,16 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
+import SEO from "@/components/SEO";
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState<FormData>({ name: "", email: "", message: "" });
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
 
@@ -56,6 +63,10 @@ const Contact = () => {
 
   return (
     <main className="pt-24 pb-16">
+      <SEO
+        title="Contact"
+        description="Get in touch with Saurav Kumar for collaborations, freelance work, or job opportunities."
+      />
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Hero Section */}

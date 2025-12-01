@@ -2,58 +2,19 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download, Mail, MapPin, Phone } from "lucide-react";
+import { experience } from "@/data/experience";
+import { education } from "@/data/education";
+import { resumeSkills as skills } from "@/data/skills";
+import SEO from "@/components/SEO";
 
 const Resume = () => {
-  const experience = [
-    {
-      title: "Software Engineer",
-      company: "Dealshare",
-      period: "Aug 2023 - Present",
-      description: "Led development of user-facing features and catalogue management for applications serving 20M+ users",
-      achievements: [
-        "Led the end-to-end ownership and centralization of the catalog system, creating a single source of truth and enabling seamless adoption across upstream services",
-        "Implemented API Gateway and integrated Keycloak with microservices to improve security by centralizing authentication and authorization, reducing public cluster exposure and optimizing operational costs",
-        "Developed APIs to enable collection and submission of user feedback, improving user interaction and system insights",
-        "Focused on writing high-quality, test-driven code with extensive unit test coverage, bringing overall service coverage to 60%+ and maintaining a clean codebase",
-        "Designed and developed many high-performance RESTful APIs, ensuring low latency, high throughput, and system stability by resolving critical issue",
-        "Mentored junior developers and conducted code reviews",
-        "Implemented responsive design systems"
-      ]
-    },
-    {
-      title: " Web Development Intern ",
-      company: "Virtuelly",
-      period: "May 2022 - July 2022",
-      description: "Developed and maintained backend features using JavaScript",
-      achievements: [
-        "Developed a hand raise functionality for the platform, leveraging WebSockets to enable real-time communication between the client and the server",
-        "Implemented auto-assignment to allocate participants into groups upon joining the event, improving user experience",
-        "Systematically reorganized AWS S3 data using a custom Bash script, improving and enhancing caching efficiency",
-        "Designed and implemented back-end logic to dynamically create folders in AWS S3 buckets and store data seamlessly"
-      ]
-    }
-  ];
-
-  const education = [
-    {
-      degree: "B.Tech - Computer Science & Engineering",
-      school: "Indian Institute of Technology, Kanpur",
-      period: "2019 - 2023",
-      // description: "Graduated Summa Cum Laude with focus on Software Engineering"
-      courses:["Data Structures and Algorithms", "Operating System", "Compiler Design",
-        "Database Management", "Software Operations and Development"
-      ]
-    }
-  ];
-
-  const skills = {
-    "Language": ["Java" , "C++", "Python" ],
-    "Backend": ["Spring Boot", "MySQL", "MongoDB", "Redis", "Kafka"],
-    "Tools": ["AWS", "Git", "ElasticSearch", "Docker"]
-  };
 
   return (
     <main className="pt-24 pb-16">
+      <SEO
+        title="Resume"
+        description="View my professional experience, education, and technical skills."
+      />
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
@@ -63,10 +24,10 @@ const Resume = () => {
             </h1>
             {/* https://drive.google.com/file/d/1WnBvy_jx3-yZcBtROFXJpdJA-0ADvDXo3F6e5ZEYzUk/view */}
             {/* https://drive.google.com/uc?export=download&id=1WnBvy_jx3-yZcBtROFXJpdJA-0ADvDXo3F6e5ZEYzUk --download*/}
-            <a href="https://drive.google.com/file/d/1yVKmn_ETr-Y4ntaky8eBx44dwrnsNuaL/view" target="_blank" rel="noopener noreferrer">
+            <a href="https://drive.google.com/file/d/1IQ8S9zY7dPM3CCoSSoZ9raqbY4nI9iJr/view" target="_blank" rel="noopener noreferrer">
               <Button className="hero-gradient hover:opacity-90 transition-opacity">
                 <Download className="mr-2 h-4 w-4" />
-                  View Resume
+                View Resume
               </Button>
             </a>
           </div>
@@ -153,13 +114,13 @@ const Resume = () => {
                   <p className="text-sm text-muted-foreground">{edu.period}</p>
                   <div className="flex flex-col gap-2 mt-2">
                     <p className="text-sm font-medium text-muted-foreground">Courses:</p>
-                      <div className="flex flex-wrap gap-2">
-                        {edu.courses.map((course) => (
-                          <Badge key={course} variant="secondary" className="bg-accent/50">
-                            {course}
-                          </Badge>
-                        ))}
-                      </div>
+                    <div className="flex flex-wrap gap-2">
+                      {edu.courses.map((course) => (
+                        <Badge key={course} variant="secondary" className="bg-accent/50">
+                          {course}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
                 </div>
               ))}

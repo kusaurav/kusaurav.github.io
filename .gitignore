@@ -24,3 +24,12 @@ build
 *.sln
 *.sw?
 .vercel
+
+# Environment variables
+.env
+
+# Testing
+coverage
+
+# ESLint
+.eslintcache
