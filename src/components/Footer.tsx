@@ -51,7 +51,7 @@ const Footer = () => {
                                 href="https://github.com/kusaurav"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-2 rounded-full bg-accent/50 hover:bg-accent text-foreground transition-colors"
+                                className="p-2 rounded-full bg-accent/50 hover:bg-accent text-black dark:text-white transition-colors"
                                 aria-label="GitHub"
                             >
                                 <Github className="h-5 w-5" />
@@ -60,23 +60,14 @@ const Footer = () => {
                                 href="https://www.linkedin.com/in/sauravk02/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-2 rounded-full bg-accent/50 hover:bg-accent text-foreground transition-colors"
+                                className="p-2 rounded-full bg-accent/50 hover:bg-accent text-[#0077b5] transition-colors"
                                 aria-label="LinkedIn"
                             >
                                 <Linkedin className="h-5 w-5" />
                             </a>
                             <a
-                                href="https://twitter.com/kusaurav"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="p-2 rounded-full bg-accent/50 hover:bg-accent text-foreground transition-colors"
-                                aria-label="Twitter"
-                            >
-                                <Twitter className="h-5 w-5" />
-                            </a>
-                            <a
                                 href="mailto:sauravkumar52270@gmail.com"
-                                className="p-2 rounded-full bg-accent/50 hover:bg-accent text-foreground transition-colors"
+                                className="p-2 rounded-full bg-accent/50 hover:bg-accent text-[#EA4335] transition-colors"
                                 aria-label="Email"
                             >
                                 <Mail className="h-5 w-5" />

@@ -1,14 +1,15 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { aboutSkills as skills } from "@/data/skills";
+import SEO from "@/components/SEO";
 
 const About = () => {
-  const skills = [
-    "Java", "Spring Boot", "MySQL", "Kafka", "MongoDB", "Redis", 
-    "ElasticSearch", "AWS" , "Git", "Docker", 
-  ];
-
   return (
     <main className="pt-24 pb-16">
+      <SEO
+        title="About Me"
+        description="Learn more about Saurav Kumar, a passionate Backend Developer with expertise in Java, Spring Boot, and distributed systems."
+      />
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
@@ -30,15 +31,11 @@ const About = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-muted-foreground">
-                I'm a passionate Java developer with over 2 years of experience building 
-                scalable and high-performance backend systems. I enjoy designing clean 
-                architectures and writing efficient, maintainable code that powers real-world 
-                applications.
+                <p className="text-muted-foreground leading-relaxed">
+                  I am a dedicated <span className="text-hero-from font-medium">Software Engineer</span> with over <span className="text-hero-from font-medium">2.5 years of experience</span> in designing and building scalable backend systems. My journey began with a deep curiosity for how large-scale applications function, which led me to specialize in <span className="text-hero-from font-medium">Java ecosystem</span> and distributed architectures.
                 </p>
-                <p className="text-muted-foreground">
-                When I'm not coding, I love exploring new technologies, optimizing system 
-                performance, and occasionally contributing to open-source projects.
+                <p className="text-muted-foreground leading-relaxed">
+                  Currently, I focus on solving complex engineering challenges, from optimizing high-throughput APIs to designing fault-tolerant microservices. I believe in writing clean, testable code and am constantly exploring new tools to improve developer productivity and system reliability.
                 </p>
               </CardContent>
             </Card>
@@ -47,20 +44,23 @@ const About = () => {
               <CardHeader>
                 <CardTitle>What I Do</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-6">
                 <div>
-                  <h4 className="font-semibold mb-2">Backend Development</h4>
-                  <p className="text-sm text-muted-foreground">
-                  Designing and developing robust APIs and microservices using Java, Spring Boot, 
-                  and Kafka. Experienced in integrating Redis for caching, Elasticsearch for fast 
-                  search capabilities, and MySQL for reliable data storage.
+                  <h4 className="font-semibold mb-2 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-hero-from"></span>
+                    Backend Engineering
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Architecting and developing robust RESTful APIs and microservices using <span className="text-foreground font-medium">Java, Spring Boot, and Kafka</span>. I specialize in building systems that are secure, scalable, and easy to maintain.
                   </p>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">System Design & Optimization</h4>
-                  <p className="text-sm text-muted-foreground">
-                  Building scalable, distributed systems and improving performance through 
-                  efficient database design, asynchronous processing, and message-driven architectures.
+                  <h4 className="font-semibold mb-2 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-hero-from"></span>
+                    Performance Optimization
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Enhancing application performance through efficient database design (<span className="text-foreground font-medium">MySQL, MongoDB</span>), caching strategies with <span className="text-foreground font-medium">Redis</span>, and implementing search solutions using <span className="text-foreground font-medium">Elasticsearch</span>.
                   </p>
                 </div>
               </CardContent>
