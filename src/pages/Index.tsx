@@ -13,7 +13,8 @@ const Index = () => {
     <main className="pt-16">
       <SEO
         title="Home"
-        description="Saurav Kumar - Backend Developer specializing in building robust, scalable applications with modern technologies."
+        description="Saurav Kumar - Backend Developer specializing in Java, Spring Boot, and distributed systems. IIT Kanpur Alumni."
+        keywords={["Saurav Kumar", "Saurav IIT", "Saurav India", "Saurav Kumar India", "Backend Developer", "Java Developer", "Software Engineer"]}
       />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

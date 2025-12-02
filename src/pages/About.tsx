@@ -8,7 +8,8 @@ const About = () => {
     <main className="pt-24 pb-16">
       <SEO
         title="About Me"
-        description="Learn more about Saurav Kumar, a passionate Backend Developer with expertise in Java, Spring Boot, and distributed systems."
+        description="Learn more about Saurav Kumar, an IIT Kanpur graduate and Backend Developer with expertise in Java, Spring Boot, and distributed systems."
+        keywords={["Saurav Kumar", "Saurav IIT", "Saurav India", "About Saurav Kumar", "IIT Kanpur Alumni", "Software Engineer India"]}
       />
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
