@@ -5,19 +5,13 @@ export const techStack = [
         icon: Server,
         title: "Backend Development",
         description: "Building robust APIs with Java & Spring Boot",
-        skills: ["Java", "Spring Boot", "Microservices", "REST APIs", "Kafka", "Redis", "ElasticSearch"]
+        skills: ["Java", "Spring Boot", "Microservices", "REST APIs", "Kafka", "AWS"]
     },
     {
         icon: Database,
         title: "Database Design",
         description: "Optimizing data storage and retrieval",
-        skills: ["PostgreSQL", "MongoDB", "Redis", "SQL"]
-    },
-    {
-        icon: Cloud,
-        title: "Cloud & DevOps",
-        description: "Deploying scalable applications",
-        skills: ["AWS", "Docker", "Kubernetes", "CI/CD"]
+        skills: ["MySQL", "MongoDB", "Redis", "ElasticSearch", "SQL"]
     },
     {
         icon: Cpu,

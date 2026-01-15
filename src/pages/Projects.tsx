@@ -39,7 +39,7 @@ const Projects = () => {
                   <CardTitle className="flex items-center justify-between">
                     {project.title}
                     <div className="flex gap-2">
-                      <Button size="icon" variant="ghost" className="h-8 w-8">
+                      <Button size="icon" variant="ghost" className="h-8 w-8" onClick={() => window.open(project.githubUrl, "_blank")}>
                         <Github className="h-4 w-4" />
                       </Button>
                       <Button size="icon" variant="ghost" className="h-8 w-8">

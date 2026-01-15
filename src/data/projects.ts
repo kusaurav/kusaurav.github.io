@@ -1,47 +1,39 @@
 export const projects = [
     {
-        title: "E-Commerce Platform",
-        description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration.",
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop",
-        tags: ["React", "Node.js", "MongoDB", "Stripe"],
+        title: "Flash Sale Engine",
+        description: "A high-performance backend system designed to handle massive concurrent traffic during flash sales. Built with Spring Boot and optimized with Redis caching and Kafka for asynchronous processing, it ensures data integrity using optimistic locking and prevents overselling.",
+        image: "https://images.unsplash.com/photo-1577538928305-3807c3993047?q=80&w=2070&auto=format&fit=crop",
+        tags: ["Spring Boot", "Java", "MySQL", "Redis", "Kafka", "Optimistic Locking"],
         liveUrl: "#",
-        githubUrl: "#"
+        githubUrl: "https://github.com/kusaurav/Flash-Sale-Engine"
     },
     {
-        title: "Task Management App",
-        description: "Collaborative task management tool with real-time updates and team features.",
-        image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop",
-        tags: ["TypeScript", "React", "Firebase", "Tailwind"],
+        title: "Shopsee",
+        description: "A full-featured e-commerce platform that simplifies online shopping. Developed using Node.js and EJS for dynamic content rendering, it manages product inventories, user authentication, and secure checkout processes, backed by a robust MySQL database.",
+        image: "https://plus.unsplash.com/premium_photo-1683746792239-6ce8cdd3ac78?q=80&w=987&auto=format&fit=crop",
+        tags: ["Node.js", "HTML", "EJS", "MySQL"],
         liveUrl: "#",
-        githubUrl: "#"
-    },
-    {
-        title: "Weather Dashboard",
-        description: "Beautiful weather application with forecasts and interactive maps.",
-        image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=300&fit=crop",
-        tags: ["Vue.js", "API Integration", "Charts.js"],
-        liveUrl: "#",
-        githubUrl: "#"
+        githubUrl: "https://github.com/kusaurav/ShopSee"
     },
     {
         title: "Portfolio Website",
-        description: "Personal portfolio built with modern web technologies and smooth animations.",
+        description: "A modern, responsive personal portfolio website designed to showcase projects and skills. Built with React and TypeScript for type safety, styled with Tailwind CSS, and enhanced with fluid animations using Framer Motion to provide an engaging user experience.",
         image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=300&fit=crop",
         tags: ["React", "TypeScript", "Tailwind", "Framer Motion"],
-        liveUrl: "#",
-        githubUrl: "#"
+        liveUrl: "https://www.sauravk.in",
+        githubUrl: "https://github.com/kusaurav/kusaurav.github.io"
     }
 ];
 
 export const recentProjects = [
     {
-        title: "E-Commerce Platform",
-        description: "Full-stack solution with React and Node.js",
-        tags: ["React", "Node.js", "MongoDB"]
+        title: "Flash Sale Engine",
+        description: "High-performance backend system guarding against overselling with Optimistic Locking.",
+        tags: ["Spring Boot", "Java", "Redis", "Kafka"]
     },
     {
-        title: "Task Management App",
-        description: "Collaborative tool with real-time updates",
-        tags: ["TypeScript", "React", "Firebase"]
+        title: "Shopsee",
+        description: "Full-stack e-commerce solution with dynamic content and order management.",
+        tags: ["Node.js", "EJS", "MySQL"]
     }
 ];
