@@ -24,7 +24,7 @@ const Resume = () => {
             </h1>
             {/* https://drive.google.com/file/d/1WnBvy_jx3-yZcBtROFXJpdJA-0ADvDXo3F6e5ZEYzUk/view */}
             {/* https://drive.google.com/uc?export=download&id=1WnBvy_jx3-yZcBtROFXJpdJA-0ADvDXo3F6e5ZEYzUk --download*/}
-            <a href="https://drive.google.com/file/d/1Kh0b_mnsrFXmWINF2pV_fLq5AOUhI4bV/view" target="_blank" rel="noopener noreferrer">
+            <a href="https://drive.google.com/file/d/1U18yWMSN3bZQMpN9NymIri2L8DxfnyEw/view" target="_blank" rel="noopener noreferrer">
               <Button className="hero-gradient hover:opacity-90 transition-opacity">
                 <Download className="mr-2 h-4 w-4" />
                 View Resume
